@@ -2,11 +2,10 @@
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "aide-challenge",
   "owner": {
-    "name": "AIDE Institute",
-    "email": "challenges@aideinstitute.com"
+    "name": "Paul Cheek"
   },
   "metadata": {
-    "description": "The official marketplace for AIDE Live Challenges. Install the activity hook so your Claude usage streams to the live challenge projector for ranking and coaching.",
+    "description": "The marketplace for AIDE Live Challenges. Install the activity hook so your Claude usage streams to the live challenge projector for ranking and coaching.",
     "version": "0.1.0"
   },
   "plugins": [
@@ -16,7 +15,7 @@
       "displayName": "AIDE Live Challenge",
       "description": "Fire-and-forget telemetry hook for AIDE Live Challenges. Reports your Claude usage to the challenge so the projector can rank approaches and coach you live. It never blocks Claude and always exits cleanly. The challenge webpage pre-fills your config values; uninstall instructions are shown when the challenge ends.",
       "version": "0.1.0",
-      "author": { "name": "AIDE Institute" },
+      "author": { "name": "Paul Cheek" },
       "license": "MIT",
       "category": "monitoring",
       "keywords": ["aide", "telemetry", "challenge", "coaching", "live"]

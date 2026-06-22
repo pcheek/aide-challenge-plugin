@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "description": "Fire-and-forget telemetry hook for AIDE Live Challenges. It reports your Claude usage to the challenge so the projector can rank approaches and coach you live. It never blocks Claude and always exits cleanly. Uninstall instructions are shown when the challenge ends.",
   "author": {
-    "name": "AIDE Institute"
+    "name": "Paul Cheek"
   },
   "license": "MIT",
   "keywords": ["aide", "telemetry", "challenge", "coaching", "live"],
