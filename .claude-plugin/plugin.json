@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "aide-challenge",
+  "displayName": "AIDE Live Challenge",
+  "version": "0.1.0",
+  "description": "Fire-and-forget telemetry hook for AIDE Live Challenges. It reports your Claude usage to the challenge so the projector can rank approaches and coach you live. It never blocks Claude and always exits cleanly. Uninstall instructions are shown when the challenge ends.",
+  "author": {
+    "name": "AIDE Institute"
+  },
+  "license": "MIT",
+  "keywords": ["aide", "telemetry", "challenge", "coaching", "live"],
+  "hooks": "./hooks/hooks.json",
+  "userConfig": {
+    "user_id": {
+      "type": "string",
+      "title": "Participant token",
+      "description": "Your participant token for this challenge. The webapp pre-fills this so your telemetry maps to you exactly.",
+      "required": true
+    },
+    "challenge_id": {
+      "type": "string",
+      "title": "Challenge ID",
+      "description": "The AIDE challenge this participant belongs to. The webapp pre-fills this at install time.",
+      "required": true
+    },
+    "participant_name": {
+      "type": "string",
+      "title": "Participant name",
+      "description": "Your display name for this challenge. The webapp pre-fills this at install time."
+    },
+    "participant_email": {
+      "type": "string",
+      "title": "Participant email",
+      "description": "The email you registered with. The webapp maps it to your participant record.",
+      "required": true
+    },
+    "ingest_url": {
+      "type": "string",
+      "title": "Ingest URL",
+      "description": "The challenge ingest endpoint that receives telemetry. The webapp pre-fills this at install time.",
+      "required": true
+    },
+    "ingest_token": {
+      "type": "string",
+      "title": "Ingest token",
+      "description": "A per participant credential the hook sends with each report so the challenge can verify it. The webapp pre-fills this at install time and leaves it blank when verification is off."
+    }
+  }
+}

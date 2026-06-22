@@ -1,0 +1,96 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "AIDE_USER_ID=\"${user_config.user_id}\" CHALLENGE_ID=\"${user_config.challenge_id}\" PARTICIPANT_NAME=\"${user_config.participant_name}\" PARTICIPANT_EMAIL=\"${user_config.participant_email}\" INGEST_URL=\"${user_config.ingest_url}\" AIDE_INGEST_TOKEN=\"${user_config.ingest_token}\" bash \"${CLAUDE_PLUGIN_ROOT}/log-usage.sh\" SessionStart"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "AIDE_USER_ID=\"${user_config.user_id}\" CHALLENGE_ID=\"${user_config.challenge_id}\" PARTICIPANT_NAME=\"${user_config.participant_name}\" PARTICIPANT_EMAIL=\"${user_config.participant_email}\" INGEST_URL=\"${user_config.ingest_url}\" AIDE_INGEST_TOKEN=\"${user_config.ingest_token}\" bash \"${CLAUDE_PLUGIN_ROOT}/log-usage.sh\" UserPromptSubmit"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "AIDE_USER_ID=\"${user_config.user_id}\" CHALLENGE_ID=\"${user_config.challenge_id}\" PARTICIPANT_NAME=\"${user_config.participant_name}\" PARTICIPANT_EMAIL=\"${user_config.participant_email}\" INGEST_URL=\"${user_config.ingest_url}\" AIDE_INGEST_TOKEN=\"${user_config.ingest_token}\" bash \"${CLAUDE_PLUGIN_ROOT}/log-usage.sh\" PreToolUse"
+          }
+        ],
+        "matcher": "*"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "AIDE_USER_ID=\"${user_config.user_id}\" CHALLENGE_ID=\"${user_config.challenge_id}\" PARTICIPANT_NAME=\"${user_config.participant_name}\" PARTICIPANT_EMAIL=\"${user_config.participant_email}\" INGEST_URL=\"${user_config.ingest_url}\" AIDE_INGEST_TOKEN=\"${user_config.ingest_token}\" bash \"${CLAUDE_PLUGIN_ROOT}/log-usage.sh\" PostToolUse"
+          }
+        ],
+        "matcher": "*"
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "AIDE_USER_ID=\"${user_config.user_id}\" CHALLENGE_ID=\"${user_config.challenge_id}\" PARTICIPANT_NAME=\"${user_config.participant_name}\" PARTICIPANT_EMAIL=\"${user_config.participant_email}\" INGEST_URL=\"${user_config.ingest_url}\" AIDE_INGEST_TOKEN=\"${user_config.ingest_token}\" bash \"${CLAUDE_PLUGIN_ROOT}/log-usage.sh\" Notification"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "AIDE_USER_ID=\"${user_config.user_id}\" CHALLENGE_ID=\"${user_config.challenge_id}\" PARTICIPANT_NAME=\"${user_config.participant_name}\" PARTICIPANT_EMAIL=\"${user_config.participant_email}\" INGEST_URL=\"${user_config.ingest_url}\" AIDE_INGEST_TOKEN=\"${user_config.ingest_token}\" bash \"${CLAUDE_PLUGIN_ROOT}/log-usage.sh\" Stop"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "AIDE_USER_ID=\"${user_config.user_id}\" CHALLENGE_ID=\"${user_config.challenge_id}\" PARTICIPANT_NAME=\"${user_config.participant_name}\" PARTICIPANT_EMAIL=\"${user_config.participant_email}\" INGEST_URL=\"${user_config.ingest_url}\" AIDE_INGEST_TOKEN=\"${user_config.ingest_token}\" bash \"${CLAUDE_PLUGIN_ROOT}/log-usage.sh\" SubagentStop"
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "AIDE_USER_ID=\"${user_config.user_id}\" CHALLENGE_ID=\"${user_config.challenge_id}\" PARTICIPANT_NAME=\"${user_config.participant_name}\" PARTICIPANT_EMAIL=\"${user_config.participant_email}\" INGEST_URL=\"${user_config.ingest_url}\" AIDE_INGEST_TOKEN=\"${user_config.ingest_token}\" bash \"${CLAUDE_PLUGIN_ROOT}/log-usage.sh\" PreCompact"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "AIDE_USER_ID=\"${user_config.user_id}\" CHALLENGE_ID=\"${user_config.challenge_id}\" PARTICIPANT_NAME=\"${user_config.participant_name}\" PARTICIPANT_EMAIL=\"${user_config.participant_email}\" INGEST_URL=\"${user_config.ingest_url}\" AIDE_INGEST_TOKEN=\"${user_config.ingest_token}\" bash \"${CLAUDE_PLUGIN_ROOT}/log-usage.sh\" SessionEnd"
+          }
+        ]
+      }
+    ]
+  }
+}
