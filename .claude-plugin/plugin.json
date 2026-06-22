@@ -30,9 +30,8 @@
     },
     "participant_email": {
       "type": "string",
-      "title": "Participant email",
-      "description": "The email you registered with. The webapp maps it to your participant record.",
-      "required": true
+      "title": "Participant email (optional)",
+      "description": "Optional. Your participant token already maps you to your record, so you can leave this blank. The webapp pre-fills it when available."
     },
     "ingest_url": {
       "type": "string",
