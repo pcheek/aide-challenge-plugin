@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "aide-challenge",
   "displayName": "AIDE Live Challenge",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Fire-and-forget telemetry hook for AIDE Live Challenges. It reports your Claude usage to the challenge so the projector can rank approaches and coach you live. It never blocks Claude and always exits cleanly. Uninstall instructions are shown when the challenge ends.",
   "author": {
     "name": "Paul Cheek"
@@ -14,35 +14,38 @@
     "user_id": {
       "type": "string",
       "title": "Participant token",
-      "description": "Your participant token for this challenge. The webapp pre-fills this so your telemetry maps to you exactly.",
-      "required": true
-    },
-    "challenge_id": {
-      "type": "string",
-      "title": "Challenge ID",
-      "description": "The AIDE challenge this participant belongs to. The webapp pre-fills this at install time.",
-      "required": true
-    },
-    "participant_name": {
-      "type": "string",
-      "title": "Participant name",
-      "description": "Your display name for this challenge. The webapp pre-fills this at install time."
-    },
-    "participant_email": {
-      "type": "string",
-      "title": "Participant email (optional)",
-      "description": "Optional. Your participant token already maps you to your record, so you can leave this blank. The webapp pre-fills it when available."
+      "description": "Your participant token for this challenge (the challenge page shows it to copy). It is the only value the hook needs: the room resolves your name, email, and team from it. If you used the one-line installer instead, this is already baked in.",
+      "default": ""
     },
     "ingest_url": {
       "type": "string",
       "title": "Ingest URL",
-      "description": "The challenge ingest endpoint that receives telemetry. The webapp pre-fills this at install time.",
-      "required": true
+      "description": "The challenge ingest endpoint that receives telemetry. Copy it from the challenge page.",
+      "default": ""
+    },
+    "challenge_id": {
+      "type": "string",
+      "title": "Challenge ID (optional)",
+      "description": "Optional. The room can resolve this from your participant token; the challenge page shows it if you want to set it.",
+      "default": ""
+    },
+    "participant_name": {
+      "type": "string",
+      "title": "Participant name (optional)",
+      "description": "Optional. Your participant token already maps you to your record; leave this blank.",
+      "default": ""
+    },
+    "participant_email": {
+      "type": "string",
+      "title": "Participant email (optional)",
+      "description": "Optional. Your participant token already maps you to your record; leave this blank.",
+      "default": ""
     },
     "ingest_token": {
       "type": "string",
-      "title": "Ingest token",
-      "description": "A per participant credential the hook sends with each report so the challenge can verify it. The webapp pre-fills this at install time and leaves it blank when verification is off."
+      "title": "Ingest token (optional)",
+      "description": "A per participant credential the hook sends with each report so the challenge can verify it. The challenge page shows it when verification is on; otherwise leave it blank.",
+      "default": ""
     }
   }
 }
